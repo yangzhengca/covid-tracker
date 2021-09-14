@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Card, Typography, CardContent, Grid } from "@material-ui/core";
 import CountUp from "react-countup";
 import cx from "classnames";
@@ -6,13 +6,31 @@ import cx from "classnames";
 import styles from "./Cards.module.css";
 import Carda from "./Carda/Carda";
 
-const Cards = ({ data, isCanada }) => {
-  // console.log(data);
+const Cards = ({ data, isCanada, dataCP, province }) => {
   if (isCanada) {
     const { summary } = data;
-    var { cases, cumulative_cases, cumulative_deaths, active_cases, date } =
-      summary[0];
+    var { cases, cumulative_cases, cumulative_deaths, date } = summary[0];
     // console.log(summary[0])
+    if (!cumulative_cases) {
+      return "Loading...";
+    }
+
+    if (province) {
+      console.log(dataCP);
+      if (province == "British Columbia") {
+        province = "BC";
+      } else if (province == "Newfoundland and Labrador") {
+        province = "NL";
+      } else if (province == "Northwest Territories") {
+        province = "NWT";
+      } else if (province == "Prince Edward Island") {
+        province = "PEI";
+      } else {
+      }
+      var dataCPX = dataCP.summary.filter((item) => item.province == province);
+      console.log(dataCPX);
+      var { cases, cumulative_cases, cumulative_deaths } = dataCPX[0];
+    }
     if (!cumulative_cases) {
       return "Loading...";
     }

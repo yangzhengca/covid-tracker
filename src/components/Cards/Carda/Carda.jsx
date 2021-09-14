@@ -23,9 +23,9 @@ const Carda = ({ cardData, date, title, text, size }) => {
     isInfected=true;
   }
 
-  if (!cardData) {
-    return "Loading...";
-  }
+  // if (!cardData) {
+  //   return "Loading...";
+  // }
 
 
 

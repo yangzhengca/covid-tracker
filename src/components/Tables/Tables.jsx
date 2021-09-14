@@ -44,7 +44,7 @@ const Tables = ({ dataCP, dataCPR, province }) => {
             <TableHead>
               <TableRow>
                 {tableHeadH.map((item, index) => (
-                  <TableCell key={index}>{item}</TableCell>
+                  <TableCell key={index}><b>{item}</b></TableCell>
                 ))}
               </TableRow>
             </TableHead>

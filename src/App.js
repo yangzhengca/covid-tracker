@@ -32,7 +32,7 @@ class App extends React.Component {
     this.setState({ dataCT: fetchedDataCanadaTime });
 
     const fetchedDataProvSummary = await fetchDataProvSummary()
-    // console.log(fetchedDataProvSummary)
+    console.log(fetchedDataProvSummary)
     this.setState({ dataCP: fetchedDataProvSummary });
 
 
@@ -84,7 +84,7 @@ class App extends React.Component {
               </Button>
             </ButtonGroup>
 
-            <Cards data={dataC} isCanada={isCanada} />
+            <Cards data={dataC} dataCP={dataCP} isCanada={isCanada} province={province}  />
             <ProvincePicker 
               handleProvinceChange={this.handleProvinceChange} 
             />

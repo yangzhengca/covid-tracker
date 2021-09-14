@@ -129,8 +129,8 @@ export const fetchDataRegionSummary = async (province) => {
         }
 
         const dataCPR=data.summary.filter((item)=>item.province==province)
-        console.log(dataCPR)
-        console.log(data)
+        // console.log(dataCPR)
+        // console.log(data)
         return dataCPR
     } catch (error) {
         console.log(error)
