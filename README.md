@@ -1,6 +1,8 @@
-# `npm install`
+# Introduce
+A Covid19 tracker website builds with React, Axios, and Chartjs, using third-party API. The functions of this app are fetching data, display, and render in charts and tables.
 
-## `npm start`
+#Tech stack
+React, Axios, Chartjs, Third party API.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#Demo
+https://covid-tracker-globle-ca.netlify.app/
